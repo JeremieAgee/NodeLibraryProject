@@ -1,0 +1,15 @@
+{
+  "name": "nodelibraryproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "library.js",
+  "scripts": {
+    "start": "node library.js"
+  },
+  "author": "Jeremie Agee",
+  "license": "MIT",
+  "dependencies": {
+    "line": "^0.1.8",
+    "read": "^3.0.1"
+  }
+}
