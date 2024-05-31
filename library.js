@@ -57,11 +57,10 @@ class Library{
                     //Remove a book if a book with the target isbn is found.
                     this.books.splice(removeBookTracker, 1);
                     console.log(`The book with ${book.title} title was removed`)
-                }
-                removeBookTracker++;
-                if (removeBookTracker==this.books.length){
+                }else if (removeBookTracker==this.books.length-1){
                     console.log(`No book found with isbn of ${isbn}`)
                 }
+                removeBookTracker++;
             });
         };
         //Function to find a book by the title of the book.
@@ -71,9 +70,11 @@ class Library{
                 //Make both values lower case so its not case sensitive when searching
                 if(book.title.toLocaleLowerCase() === searchedTitle.toLocaleLowerCase()){
                     matchedBook = book; 
+                    //Log the find
                     console.log(`Book with a title of "${book.title}" was found.`);
                 }
             });
+            //If the book is found return the book
             if(matchedBook!=undefined){
             return matchedBook;
             } else {
